@@ -1,0 +1,7 @@
+services:
+    night.user.user_manager:
+       class: Night\UserBundle\Doctrine\UserManager
+       arguments: [ @security.encoder_factory, @fos_user.util.username_canonicalizer, @fos_user.util.email_canonicalizer, @fos_user.entity_manager, %fos_user.model.user.class% ]
+     
+       
+          
